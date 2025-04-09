@@ -4,15 +4,21 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
+@Getter @Setter
 @Table(name = "w_book_h")
-public class Book_H {
+public class BookH {
 
     @Id
     @Column(name="BOOK_ID")
     private Long bookId;
+
+    private String comment;
+
 
     /*BOOK_ST_TIME	DATETIME	,
     BOOK_EN_TIME	DATETIME	,
@@ -24,11 +30,10 @@ public class Book_H {
     C_DATE	DATETIME	,
     U_ID	BIGINT	,
     U_DATE	DATETIME;
-    @Column(name="CLIENT_ID")
     private Long client_id;
     book_st_time	datetime	,
     book_en_time	datetime	,
-    book_cd	varchar(5)	,
+    book_sts varchar(5)	,
     sale_id	bigint	,
     comment	varchar(1000)	,
     db_sts	varchar(5)	,
