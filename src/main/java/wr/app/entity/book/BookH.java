@@ -6,12 +6,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import wr.app.entity.BaseEntity;
 
 
 @Entity
 @Getter @Setter
 @Table(name = "w_book_h")
-public class BookH {
+public class BookH extends BaseEntity {
 
     @Id
     @Column(name="BOOK_ID")
@@ -36,9 +37,5 @@ public class BookH {
     book_sts varchar(5)	,
     sale_id	bigint	,
     comment	varchar(1000)	,
-    db_sts	varchar(5)	,
-    c_id	bigint	,
-    c_date	datetime	,
-    u_id	bigint	,
-    u_date	datetime*/
+    */
 }
