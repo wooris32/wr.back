@@ -1,4 +1,4 @@
-package wr.back.app;
+package wr.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
