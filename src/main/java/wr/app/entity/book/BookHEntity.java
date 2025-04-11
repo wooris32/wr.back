@@ -2,22 +2,26 @@ package wr.app.entity.book;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 import wr.app.entity.BaseEntity;
 
 
-@Entity
+@Entity(name = "w_book_h")
 @Getter @Setter
-@Table(name = "w_book_h")
-public class BookH extends BaseEntity {
+public class BookHEntity extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="BOOK_ID")
     private Long bookId;
 
+    @Column(length = 1000)
     private String comment;
 
 

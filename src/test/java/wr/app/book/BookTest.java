@@ -1,15 +1,15 @@
-package wr.app.bookTest;
+package wr.app.book;
 
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
-import wr.app.entity.book.BookH;
+import wr.app.entity.book.BookHEntity;
 import wr.app.repository.book.BookHRepository;
 
 @SpringBootTest
-public class bookTest {
+public class BookTest {
 
     @Autowired
     BookHRepository bookHRepository;
@@ -18,7 +18,8 @@ public class bookTest {
     @Transactional
     @Rollback(false)
     public void testBookHRespository(){
-        BookH bookH = new BookH();
-        bookH.set
+        BookHEntity bookH = new BookHEntity();
+        bookH.setComment("TEST");
+        Long bookId = bookHRepository.save(bookH);
     }
 }
