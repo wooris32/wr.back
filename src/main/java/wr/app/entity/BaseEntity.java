@@ -20,10 +20,11 @@ import java.time.LocalDateTime;
 @Setter
 public abstract class BaseEntity {
 
+    @Column(length = 5)
     private String dbSts;
 
     @CreatedBy
-    @Column(updatable = false)
+    @Column(updatable = false, length = 10)
     private String cId;
 
     @CreatedDate
@@ -31,6 +32,7 @@ public abstract class BaseEntity {
     private LocalDateTime cDate;
 
     @LastModifiedBy
+    @Column(length = 10)
     private String uId;
 
     @LastModifiedDate
